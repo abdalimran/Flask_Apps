@@ -1,0 +1,20 @@
+<html>
+    
+    <head>
+        <title>IEEE Events Scraper</title>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    </head>
+    
+    <body>
+        <h1>IEEE Conferences in Region 10 - Asia and Pacific</h1>
+        {% if events !="" %}
+            {{events|safe}}
+        {% else %}
+            <h1>Sorry!! No events found. :(<h1>
+        {% endif %}
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</html>
